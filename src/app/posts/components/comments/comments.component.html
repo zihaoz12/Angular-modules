@@ -1,0 +1,19 @@
+
+<table class="comments-table">
+    <tr>
+        <th>Email</th>
+        <th>Name</th>
+        <th>Body</th>
+    </tr>
+    <tr *ngFor="let comment of comments">
+        <td>
+            {{ comment.email }}
+        </td>
+        <td>
+            {{ comment.name | limieChar}}
+        </td>
+        <td>
+            {{ comment.body | limieChar}}
+        </td>
+    </tr>
+</table>

@@ -1,0 +1,10 @@
+<div *ngIf="album">
+  <a target="_blank" [href]="album.collectionViewUrl" class="card-img">
+    <img [src]="album.artworkUrl100">
+  </a>
+<a routerLink="{{album.artistId}}">
+    <p>{{album.artistName}}</p>
+  </a>
+
+
+  </div>

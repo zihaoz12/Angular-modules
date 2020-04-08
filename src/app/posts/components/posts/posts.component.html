@@ -1,0 +1,43 @@
+<p>posts works!</p>
+<section>
+    <header class="section-header">
+        <div class="section-header-list">
+          <div class="section-header-list__item">
+            <button class="btnGetPosts" (click)="getPosts()">GetPosts</button>
+          </div>
+          <div class="section-header-list__item">
+            <button class="btnClearPosts" (click)="clearPosts()">ClearPosts</button>
+          </div>
+        </div>
+    </header>
+
+    <div class="section-content">
+        <table class="posts-table" *ngIf="posts.length > 0">
+          <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Body</th>
+            <th>Action</th>
+          </tr>
+          <tr *ngFor="let post of posts">
+            <td>
+              {{ post.id }}
+            </td>
+            <td>
+              {{ post.title }}
+            </td>
+            <td>
+              {{ post.body }}
+            </td>
+            <td>
+              <button (click)="showComments(post.id)">Show Comments</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+</section>
+
+
+<app-modal id="comments-modal">
+    <app-comments [comments]="comments"></app-comments>
+</app-modal>

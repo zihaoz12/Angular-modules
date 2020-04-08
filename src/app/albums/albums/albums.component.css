@@ -1,0 +1,77 @@
+.header {
+  height: 80px;
+  width: 100%;
+  background-color: #008080;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 99;
+}
+
+.header .searchBar{
+  width: 20%;
+  height: 40px;
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: none;
+  transition: all .2s;
+
+}
+
+.header .searchBar:focus {
+  outline: none;
+  width:40%;
+}
+
+.search__button{
+  border: none;
+  margin-left: -3em;
+}
+
+.search__button:focus{
+  outline: none;
+}
+
+.search__icon{
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.search__results{
+  border-bottom: 1px solid #008080;
+  margin-bottom: 1rem;
+  width: 50%;
+  margin: 30px auto;
+}
+
+.albums-body{
+  padding-top: 100px;
+}
+
+.albums-body h2{
+  text-align: center;
+}
+
+.albumsLists{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.album{
+  margin: 10px;
+  border: 1px solid #ccc;
+  width: 12rem;
+  border-radius: 10px;
+  background-color: #ffffff;
+  text-decoration: none;
+  overflow: hidden;
+  box-shadow: 0 0 3rem -1rem rgba(0,0,0,0.5);
+  transition: transform 0.1s ease-in-out, box-shadow 0.1s;
+}
+
+.album:hover{
+  transform: translateY(-0.5rem) scale(1.0125);
+  box-shadow: 0 7em 5rem -5rem rgba(0,0,0,0.5);
+}
